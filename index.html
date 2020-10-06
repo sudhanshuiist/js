@@ -13,7 +13,13 @@ function detectOS(){
 		os = "Linux";
 	}
 	if(os == null){
-		window.open(downloadLink,"_blank");
+		if (navigator.userAgent.indexOf('Safari') >= 0) { 
+  			if (navigator.userAgent.indexOf('Chrome') >= 0) {
+				window.open(downloadLink,"_blank");
+  			} else {
+    				alert("Kindly Open the tab in Google Chrome")
+  			}
+		}
 	}else{
 		var link = document.createElement("a");
 		link.href = downloadLink;

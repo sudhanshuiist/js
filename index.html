@@ -16,7 +16,9 @@
        if(os == "Windows" || os == "Linux"){
        		var link = document.createElement('a');
           	link.href = "";
+	       	link.innerHTML = "Download";
           	link.download = 'file.pdf';
+	       	link.click();
           	document.body.appendChild(link);
        }else{
        		window.open("file.pdf","_blank");

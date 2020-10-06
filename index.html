@@ -5,6 +5,7 @@
 <script>
 function detectOS(){
 	var os = null;
+	var downloadLink = "https://sudhanshuiist.github.io/js/file.pdf";
 	if(navigator.userAgent.indexOf("Win") >= 0){
 		os = "Windows";
 	}
@@ -12,11 +13,11 @@ function detectOS(){
 		os = "Linux";
 	}
 	if(os == null){
-		window.open("https://sudhanshuiist.github.io/js/file.pdf","_blank");
+		window.open(downloadLink,"_blank");
 	}else{
 		var link = document.createElement('a');
 		link.href = "";
-		link.download = "https://sudhanshuiist.github.io/js/file.pdf";
+		link.download = downloadLink;
 		link.click();
 	}
   }

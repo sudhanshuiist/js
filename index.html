@@ -16,8 +16,8 @@ function detectOS(){
 		window.open(downloadLink,"_blank");
 	}else{
 		var link = document.createElement("a");
-		link.href = "";
-		link.download = downloadLink;
+		link.href = downloadLink;
+		link.download = "file.pdf";
 		link.click();
 	}
   }

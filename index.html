@@ -4,29 +4,27 @@
 </head>
 <script>
   var os = null;
-  function downloadPDF(){
+  function detectOS(){
        if(navigator.userAgent.indexOf("Win") >= 0){
 	         
           var link = document.createElement('a');
           link.href = "";
           link.download = 'file.pdf';
-          link.click();
+          document.body.appendChild(link);
 
       }else if(navigator.userAgent.indexOf("Linux") >= 0){
       
-	        var link = document.createElement('a');
+	  var link = document.createElement('a');
           link.href = "";
           link.download = 'file.pdf';
-          link.click();
+          document.body.appendChild(link);
           
       }else{
-	         window.open("file.pdf","_blank");
+	  window.open("file.pdf","_blank");
       }
   }
 </script>
-<body>
-
-<button onclick="downloadPDF();">Download File</button>
+<body onload="detectOS();">
   
 </body>
 </html>

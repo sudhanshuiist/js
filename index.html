@@ -3,18 +3,18 @@
 <title>Detect Os</title>
 </head>
 <script>
-	var os = null;
-	if(navigator.userAgent.indexOf("Win") >= 0){
-		os = "Windows";
-	}else if(navigator.userAgent.indexOf("Linux") >= 0){
-		os = "Linux";
-	}else{
-		os = "Other";
-      	}
+var os = null;
+if(navigator.userAgent.indexOf("Win") >= 0){
+	os = "Windows";
+}else if(navigator.userAgent.indexOf("Linux") >= 0){
+	os = "Linux";
+}else{
+	os = "Other";
+}
 	
-  function detectOS(){
-       if(os == "Windows" || os == "Linux"){
-       		var link = document.createElement('a');
+function detectOS(){
+	if(os == "Windows" || os == "Linux"){
+  		var link = document.createElement('a');
           	link.href = "";
 	       	link.innerHTML = "Download";
           	link.download = 'file.pdf';

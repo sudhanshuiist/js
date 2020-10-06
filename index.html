@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Detect Os</title>
+</head>
+<script>
+  var os = null;
+  function downloadPDF(){
+       if(navigator.userAgent.indexOf("Win") >= 0){
+	         
+          var link = document.createElement('a');
+          link.href = "";
+          link.download = 'file.pdf';
+          link.click();
+
+      }else if(navigator.userAgent.indexOf("Linux") >= 0){
+      
+	        var link = document.createElement('a');
+          link.href = "";
+          link.download = 'file.pdf';
+          link.click();
+          
+      }else{
+	         window.open("file.pdf","_blank");
+      }
+  }
+</script>
+<body>
+
+<button onclick="downloadPDF();">Download File</button>
+  
+</body>
+</html>

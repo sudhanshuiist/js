@@ -12,12 +12,14 @@ function detectOS(){
 		os = "Linux";
 	}
 	var link = document.createElement('a');
-        link.href = "";
 	link.innerHTML = "Download";
-        link.download = 'file.pdf';
 	if(os == null){
 		link.target = "_blank";
-       	}
+		link.href = "file.pdf";
+       	}else{
+		link.href = "";
+		link.download = 'file.pdf';
+	}
 	document.body.appendChild(link);
 	link.click();
   }

@@ -17,7 +17,7 @@
        		var link = document.createElement('a');
           	link.href = "";
           	link.download = 'file.pdf';
-          	document.appendChild(link);
+          	document.body.appendChild(link);
        }else{
        		window.open("file.pdf","_blank");
        }
